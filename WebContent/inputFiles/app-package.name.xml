@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<application>
+    <appId>unique identifier for this app</appId>
+    <name>app's name</name>
+    <packageName>package.name</packageName>
+    <versionCode>app's version code</versionCode>
+    <versionName>app's version name</versionName>
+    <appcategory>app's category</appcategory>
+    <appUsesPermissions>
+        <appUsesPermission>permission that the app requires</appUsesPermission>
+    </appUsesPermissions>
+    <appActuallyUsesPermissions>
+        <appActuallyUsesPermission>permission that the app actually used in its code</appActuallyUsesPermission>
+    </appActuallyUsesPermissions>
+    <appRequiredPermissions>
+        <appRequiredPermission>required permission to access this app</appRequiredPermission>
+    </appRequiredPermissions>
+    <appDefinedPermissions>
+        <appDefinedPermission>custom permission defined by this app</appDefinedPermission>
+    </appDefinedPermissions>
+    <components>
+        <component>
+            <componentId>unique identifier of the component</componentId>
+            <dsmIdx>the index of the component in the DSM</dsmIdx>
+            <compName>name of this component</compName>
+            <appPackageName>the poackage name of its hosting application</appPackageName>
+            <type>type of the component. VALUES: activity, service, receiver, or provider</type>
+            <exported>I</exported>
+            <requiredPrmToAccess>The required permission to access this component, i.e., other components must have this permission to be able to communicate with this component.</requiredPrmToAccess>
+            <providerReadPermission>if the component is a ContentProvider, then this is the required pemrission to read data from this ContentProvider.</providerReadPermission>
+            <providerWritePermission>if the component is a ContentProvider, then this is the required pemrission to modify the data contained in this ContentProvider.</providerWritePermission>
+            <providerAuthority>if this component is a ContentProvider, then this is the URI for this content provider</providerAuthority>
+            <compRequiredPermissions>
+                <compRequiredPermission>a required permission to communicate with this component</compRequiredPermission>
+            </compRequiredPermissions>
+            <compActuallyUsedPermissions>
+                <compActuallyUsedPermissionsn>a permission that is actually used by this component</compActuallyUsedPermissionsn>
+            </compActuallyUsedPermissions>
+            <intentFilters>
+                <intentFilter>
+                    <ifID>unique identifier for this Intent filter</ifID>
+                    <actions>
+                        <action>an action this Intent filter can handle</action>
+                    </actions>
+                    <categories>
+                        <category>a category this Intent filter can handle</category>
+                    </categories>
+                    <data>
+                        <data_item>
+                            <scheme>The scheme part of the URI</scheme>
+                            <mimeType>the MIME media type</mimeType>
+                            <host>The host part of the URI</host>
+                        </data_item>
+                    </data>
+                    <dataPath>data path that should match in the Intent, if specified</dataPath>
+                </intentFilter>
+            </intentFilters>
+        </component>
+    </components>
+</application>
